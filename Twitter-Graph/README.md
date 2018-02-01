@@ -10,5 +10,5 @@ I follow about 110 users on Twitter, but capturing the followership of all 110+ 
 
 I learned the hardships of rate limits early (referring to the "tedious on the Twitter API" above) and decided to get information on every 5th user I follow on Twitter, which at the time equated to 22 users. For the 22 users, I used Tweepy to get all their followers. The Twitter API returns 5,000 followers at a time per user (per page), which I thought could be good testing ground. For the 22 users, this returned over 56,000 users, which when plotted on Gephi was difficult to discern and burdensome on its in-built network algorithms (referring the the "cumbersome to plot on Gephi" above). 
 
-Here's an image of 56,000+ nodes (representing users): 
-![alt text](https:
+Here's an image of 56,000+ nodes and their edges (representing users and connections): 
+![alt text](Personal-Projects/56000nodes.png)
