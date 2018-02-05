@@ -16,4 +16,27 @@ Here's an image of 56,000+ nodes and their edges (representing users and connect
 The above is a lot of information to pass through to Gephi (in case the scale is not clear, look closely at the edges -- the sparse dots indicate an indiviudal user -- the more dense areas are composed of thousands). Following this, I decided to use the first 1,000 followers of each of the 22 users I follow. This led to some 8,000+ nodes: 
 ![alt text](./8000nodes.png)
 
-This, we can work with. 
+This, while still a great deal of information, we can work with. 
+
+To recap, the graph I'm creating shows (in the form of Twitter usernames):
+1. Me
+2. 22 users I follow (Twitter would call these my friends)
+3. Upto 1,000 users that follow each of my 22 friends (Twitter calls these followers)
+
+With this information, we create a directed graph in the form follower --[follows]--> friend (this is point 3 above). We also have I(me) --[follow]--> friend (which is points 1 and 2 above but, as we'll soon see, not as noticable). 
+
+We're still working with over 8,000 nodes so to be selective, I decide to label all nodes that have an in-degree of 50 or above, which means, they have at least 50 users following them (this turns out to be 19 of my 22 friends). This leads to the meat of the my question: of my friends, who or what portion are famous names with many, many followers and how many are people I personally know who are still somewhat present/active on Twitter (this was the decision to choose 50 as the in-degree cut-off).
+
+It turns out of the 19 labeled friends, 11 are users who are famous names, organizations, etc. (with many more than 1,000 users, though that is all that I show) and 8 are people I personally know who have [hopefully organically] acquired between 50 and 550 followers. 
+
+Here's a zoomed out version of the final output: 
+![alt text](./WhoFollowsMyFriends_ZoomedOut.png)
+
+What you see: 
+1. The 19 labeled friends (plus me, toward the bottom left).
+2. So many edges -- colored according to the in-degree value, ranging from 50 to 1,001 (1,001, because I am also a follower of my friends).
+3. Breaking down point 2 further: the purple-ish-blue indicate followership of 1,000+, the green denote a range between 150 - 500 (with more saturated green toward the top of the range), and the yellow denote a range between 50 - 150. 
+
+So, outside of this graph, what have I learned? Let's look at this closer: 
+![alt text](./WhoFollowsMyFriends_ZoomedIn.png)
+
