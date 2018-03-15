@@ -6,15 +6,22 @@ When I first joined, I only followed friends and some famous names. Since then, 
 
 Along this vein, I wanted to explore how popular are the users that I follow? Are the majority of them companies or celebrities that have millions of followers? Have the people I know personally grown to have large followerships? 
 
-I follow about 110 users on Twitter but capturing the followership of all 110+ users would be tedious on the ["Twitter API](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids) and [Tweepy](http://docs.tweepy.org/en/v3.5.0/) and cumbersome to plot on [Gephi](https://gephi.org/). 
+I follow about 110 users on Twitter but capturing the followership of all 110+ users would be tedious on the [Twitter API](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids) and [Tweepy](http://docs.tweepy.org/en/v3.5.0/) and cumbersome to plot on [Gephi](https://gephi.org/). 
 
 I learned the hardships of rate limits early (referring to the "tedious on the Twitter API" above) and decided to get information on every 5th user I follow on Twitter, which at the time equated to 22 users. For the 22 users, I used Tweepy to get all their followers. The Twitter API returns 5,000 followers at a time per user (per page), which I thought could be good testing ground. For the 22 users, this returned over 56,000 users, which when plotted on Gephi was difficult to discern and burdensome on its in-built network algorithms (referring the the "cumbersome to plot on Gephi" above). 
 
-Here's an image of 56,000+ nodes and their edges (representing users and connections): 
+##### Here's an image of 56,000+ nodes and their edges (representing users and connections): 
 ![alt text](./56000nodes.png)
-The above is a lot of information to pass through to Gephi (in case the scale is not clear, look closely at the edges -- the sparse dots indicate an indiviudal user -- the denser areas are composed of thousands). Following this, I decided to use the first 1,000 followers of each of the 22 users I follow. This led to some 8,000+ nodes: 
+The above is a lot of information to pass through to Gephi (in case the scale is not clear, look closely at the edges -- the sparse dots indicate an indiviudal user -- the denser areas are composed of thousands). 
+
+Following this, I decided to use the first 1,000 followers of each of the 22 users I follow. 
+
+##### This led to some 8,000+ nodes: 
 ![alt text](./8000nodes.png)
-This, while still a great deal of information, we can work with. To recap, the graph I'm creating shows (in the form of Twitter usernames): 1. Me, 2. 22 users I follow (Twitter would call these my friends), 3. Upto 1,000 users that follow each of my 22 friends (Twitter calls these followers)
+This, while still a great deal of information, we can work with. To recap, the graph I'm creating shows (in the form of Twitter usernames): 
+1. Me
+1. 22 users I follow (Twitter would call these my friends)
+1. Upto 1,000 users that follow each of my 22 friends (Twitter calls these followers)
 
 With this information, we create a directed graph in the form follower --[follows]--> friend (this is point 3 above). We also have I(me) --[follow]--> friend (which is points 1 and 2 above but, as we'll soon see, not as noticable). 
 
