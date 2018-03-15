@@ -6,7 +6,7 @@ When I first joined, I only followed friends and some famous names. Since then, 
 
 Along this vein, I wanted to explore how popular are the users that I follow? Are the majority of them companies or celebrities that have millions of followers? Have the people I know personally grown to have large followerships? 
 
-I follow about 110 users on Twitter but capturing the followership of all 110+ users would be tedious on the (https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids "Twitter API") and (http://docs.tweepy.org/en/v3.5.0/ "Tweepy") and cumbersome to plot on (https://gephi.org/ "Gephi"). 
+I follow about 110 users on Twitter but capturing the followership of all 110+ users would be tedious on the ["Twitter API](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-followers-ids) and [Tweepy](http://docs.tweepy.org/en/v3.5.0/) and cumbersome to plot on [Gephi](https://gephi.org/). 
 
 I learned the hardships of rate limits early (referring to the "tedious on the Twitter API" above) and decided to get information on every 5th user I follow on Twitter, which at the time equated to 22 users. For the 22 users, I used Tweepy to get all their followers. The Twitter API returns 5,000 followers at a time per user (per page), which I thought could be good testing ground. For the 22 users, this returned over 56,000 users, which when plotted on Gephi was difficult to discern and burdensome on its in-built network algorithms (referring the the "cumbersome to plot on Gephi" above). 
 
