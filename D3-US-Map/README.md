@@ -1,13 +1,13 @@
 # Which States in the US have I visited?
-A new year's resolution I had back in 2013 was to try and visit as many states
-as possible in the US. It's been 5 years since then, so I wanted to gauge how
+A new year's resolution I made back in 2013 was to try and visit as many states
+as possible in the US. It's been 5 years since then, so I wanted to gauge 
 how much progress I've made. As opposed to statistics, I thought it would be
-more interesting to visualize the states I've visited.
+more interesting and fun to *visualize* the states I've visited.
 
 Thus, I created a D3 map that shows which states I have visited and which are
 still on the bucket list.
 
-The next iteration of this exercise will include cities I have visited.
+*The next iteration of this exercise will include cities I've visited.*
 
 #### Where to see the actual map + code:
 1. [The bl.ocks.org post storing and producing the map](http://bl.ocks.org/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd)
