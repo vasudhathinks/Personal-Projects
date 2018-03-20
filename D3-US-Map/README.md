@@ -1,7 +1,17 @@
-#### Premise:
+# Which States in the US have I visited?
 A new year's resolution I had back in 2013 was to try and visit as many states
-as possible in the US. It's been 5 years since then, so let's see how much progress
-I've made.
+as possible in the US. It's been 5 years since then, so I wanted to gauge how
+how much progress I've made. As opposed to statistics, I thought it would be
+more interesting to visualize the states I've visited.
+
+Thus, I created a D3 map that shows which states I have visited and which are
+still on the bucket list.
+
+The next iteration of this exercise will include cities I have visited.
+
+#### Where to see the actual map + code:
+1. [The bl.ocks.org post storing and producing the map](http://bl.ocks.org/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd)
+1. [Source code on GitHubGist](https://gist.github.com/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd)
 
 ##### The idea from this D3 visualization came from:
 1. [Sam Matthew's Block on Queue.js](http://bl.ocks.org/mapsam/6090056)

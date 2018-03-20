@@ -3,11 +3,6 @@
 <title> States I've Visited </title>
 
 <style>
-  /*
-  US GeoData & State Names Data sourced from: https://bl.ocks.org/dnprock/5215cc464cfb9affd283
-  Idea & support: http://bl.ocks.org/mapsam/6090056 & http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922
-  */
-
   .states {
     fill: #e5e5e5;
     stroke: #636363;
@@ -58,14 +53,14 @@
 
 <body>
 
-  <script src="../lib/d3.v3.min.js"></script>
-  <script src="../lib/d3-queue.v3.min.js"></script>
-  <script src="../lib/topojson.v1.min.js"></script>
-  <script src="../lib/d3.tip.v0.6.3.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 
   <script>
     var width = 900,
-      height = 700;
+      height = 500;
 
     var svg = d3.select('body')
       .append('svg')
@@ -131,55 +126,57 @@
         .on('mouseover', tipState.show)
         .on('mouseout', tipState.hide);
 
-      /* usData = us;
+      /* To be finalized for next iteration: add the cities I've visited:
+                usData = us;
 
-              var tipCity = d3.tip()
-                .attr('class', 'd3-tip')
-                .offset([-10, 0])
-                .html(function(d) {
-                  tipText = ""
-                  for (i = 0; i < citiesVisited.length; i++) {
-                    if (d.id == statesVisited[i].id) {
-                      tipText += statesVisited[i].name;
-                    }
-                  }
-                  return citiesVisited.city;
-                })
+                    var tipCity = d3.tip()
+                      .attr('class', 'd3-tip')
+                      .offset([-10, 0])
+                      .html(function(d) {
+                        tipText = ""
+                        for (i = 0; i < citiesVisited.length; i++) {
+                          if (d.id == statesVisited[i].id) {
+                            tipText += statesVisited[i].name;
+                          }
+                        }
+                        return citiesVisited.city;
+                      })
 
-              svg.call(tipCity);
+                    svg.call(tipCity);
 
-              svg.selectAll("circle")
-              	.data(cities_visited)
-              	.enter()
-              	.append("circle")
-              	.attr("cx", function(d) {
-              		return projection([d.longitude, d.latitude])[0];
-              	})
-              	.attr("cy", function(d) {
-              		return projection([d.longitude, d.latitude])[1];
-              	})
-              	.attr("r", 4)
-              		.style("fill", "807dba")
-              //  .on('mouseover', tipCity.show)
-                //.on('mouseout', tipCity.hide)
-              	;
+                    svg.selectAll("circle")
+                    	.data(cities_visited)
+                    	.enter()
+                    	.append("circle")
+                    	.attr("cx", function(d) {
+                    		return projection([d.longitude, d.latitude])[0];
+                    	})
+                    	.attr("cy", function(d) {
+                    		return projection([d.longitude, d.latitude])[1];
+                    	})
+                    	.attr("r", 4)
+                    		.style("fill", "807dba")
+                    //  .on('mouseover', tipCity.show)
+                    //  .on('mouseout', tipCity.hide)
+                    	;
       */
-      svg.append("text")
-        .attr("x", (width / 2))
-        .attr("y", (100))
-        .attr("text-anchor", "middle")
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "22px")
-        .attr("font-weight", "bold")
-        .text("Which States Have I Visited in the US?");
-
+      /* Commenting out the Title because it appears redundant on the block
+            svg.append("text")
+              .attr("x", (width / 2))
+              .attr("y", (100))
+              .attr("text-anchor", "middle")
+              .attr("font-family", "sans-serif")
+              .attr("font-size", "22px")
+              .attr("font-weight", "bold")
+              .text("Which States Have I Visited in the US?");
+      */
       colorDomain = ["...yet to visit", "visited!"]
 
       var legend = svg.append("g")
         .attr("class", "legend")
         .attr("height", 100)
         .attr("width", 100)
-        .attr('transform', 'translate(-50,50)');
+        .attr('transform', 'translate(-50,0)');
 
       legend.selectAll('rect')
         .data(colorScale.range())
