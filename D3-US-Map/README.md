@@ -11,7 +11,7 @@ still on the bucket list.
 
 #### Where to see the actual map + code:
 1. [The bl.ocks.org post storing and producing the map](http://bl.ocks.org/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd)
-1. [Source code on GitHubGist](https://gist.github.com/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd)
+1. [Source code on GitHubGist](https://gist.github.com/vasudhathinks/a0ba770a0af768a9cf2d654e9515acfd) (as well as in this directory)
 
 ##### The idea from this D3 visualization came from:
 1. [Sam Matthew's Block on Queue.js](http://bl.ocks.org/mapsam/6090056)
