@@ -103,3 +103,4 @@ ENV/
 # Add'l ignores
 .DS_Store
 Twitter-Graph/.Rhistory
+.idea/*
