@@ -13,7 +13,7 @@ I learned the hardships of rate limits early (referring to the "tedious on the T
 #### Here's an image of 56,000+ nodes and their edges (representing users and connections): ![alt text](./56000nodes.png)
 The above is a lot of information to pass through to Gephi (in case the scale is not clear, look closely at an edge of the image -- the sparse dots indicate an indiviudal user -- the denser areas are composed of thousands). Following this, I decided to use the first 1,000 followers of each of the 22 users I follow. This led me to some 8,000+ nodes.
 
-#### An image of 8,000+ nodes and their edges: ![alt text](/Images/8000nodes.png)
+#### An image of 8,000+ nodes and their edges: ![alt text](./Images/8000nodes.png)
 This, while still a great deal of information, we can work with. 
 
 ### To recap, what am I doing?
