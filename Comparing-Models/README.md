@@ -25,6 +25,7 @@ of understanding, which would both suffer if the model accounted for the various
 All factor variables were converted to numerical values for consistency.
 1. The original HR Attrition dataset has 9 features and 1 response variable. All variables were kept though
 factor variables where converted to numerical values.
+1. Each dataset was split into a training and test set with 80% and 20% of the original data, respectively.
 
 #### Supervised Learning Algorithms used in R:
 1. Decision Trees
@@ -57,18 +58,19 @@ The primary metric for comparing model performance is with accuracy rates.
 | KNN - k=5                  | 96.7%        | 96.3%     |
 
 
+#### Discussion:
+1. Decision Trees. It is clear that the decision trees algorithm was much better at mapping the 
+HR Attrition dataset as compared to Titanic: looking at test set accuracies, we are comparing 78.7%
+accuracy for Titanic and 97.0% accuracy for HR Attrition! Additionally, though the details have not been shared,
+another interesting point was that the tree for Titanic only used 4 of its 7 features for mapping, while
+HR Attrition used 6 of its 9 features. Finally, pruning Titanic's tree led to the same accuracy, while
+additional nodes for HR continued to improve accuracy. 
 
-
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
+1. Neural Networks. On these relatively small datasets, the neural network models did not perform very well, nor did
+they have an easy time training the model when run (which is why they were only run with 2 layers or even just 2 nodes). 
+It was surprising that this algorithm could not map HR Attrition well because my general sense
+about that data was that it is clear and follows a known distribution (since it's simulated), 
+however, it performed very poorly in comparison to the other models (85.1% test accuracy compared to others' in the 90s).
+In contrast, the Titanic data performed relatively well. This speaks volumes about the algorithm, which is able to pick 
+information through the noise (Titanic), but not necessarily translate clarity well (HR).
 
