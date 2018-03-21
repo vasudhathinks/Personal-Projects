@@ -1,5 +1,5 @@
 #### Premise:
-Various classification machine learning algorithms were used on two datasets to compare model performance and understand different models' strengths and weaknesses.
+Various supervised learning classification algorithms were used on two datasets to compare model performance and understand different models' strengths and weaknesses.
 
 #### Description of the two datasets:
 1. [The Titanic Dataset from Kaggle.](https://www.kaggle.com/c/titanic/data)
@@ -74,3 +74,18 @@ however, it performed very poorly in comparison to the other models (85.1% test 
 In contrast, the Titanic data performed relatively well. This speaks volumes about the algorithm, which is able to pick 
 information through the noise (Titanic), but not necessarily translate clarity well (HR).
 
+1. Boosting. This ensemble method did not perform particularly well on these datasets as compared to the others. 
+This weak learner, however, does not lag far behind. With more iterations, it improved its performance and I expect
+with further experimentation, it could improve.
+
+1. SVM. Both datasets resulted in high accuracies using SVM with a Gaussian kernel (leave it to gauss to understand
+data distributions). Performance on the Titanic data is more surprising and satisfying, with its relatively high accuracies 
+of 85.6% on the training and 82.3% on the test set, because it was difficult to find a model or tweak parameters that
+would increase accuracy above the high 70s-low 80s.
+
+1. KNN. My favorite algorithm (and a lazy one at that). While the detail is not shared, the Titanic dataset showed that 
+the more neighbors (k) used, the more accurate prediction of the response variable. On the other hand, the HR dataset 
+showed that the accuracy on the test set decreased after a certain value of k (k=5). This suggests that the data points 
+in HR dataset are placed close to each other for predicting to the same response variable and when additional (and further) 
+points are included to make an assessment, it throws off accuracy. For the Titanic dataset, I wonder if capturing more
+neighbors allows the model to incorporate more noise, which results in a more accurate reading. 
