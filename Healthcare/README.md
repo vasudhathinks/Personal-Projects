@@ -1,0 +1,1 @@
+This directory contains the two (2) plots for analyzing MIMIC-III Healthcare data as part of a Project Proposal to while at The Data Incubator. To better understand the plots (.png), the jupyter notebooks (.ipnby) can be reviewed. 
