@@ -1,0 +1,1 @@
+This directory contains files and figures that walk through an analysis on 1,000 patients from the MIMIC-III Healthcare dataset as part of a Project Proposal to do while at The Data Incubator. Please review the jupyter notebooks (.ipnby files) to walk through the analysis.
